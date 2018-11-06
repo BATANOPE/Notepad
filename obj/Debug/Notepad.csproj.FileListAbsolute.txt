@@ -1,0 +1,11 @@
+C:\Users\Макс\Desktop\Проекты\C#\Лобач\Notepad\Notepad\bin\Debug\Notepad.exe.config
+C:\Users\Макс\Desktop\Проекты\C#\Лобач\Notepad\Notepad\bin\Debug\Notepad.exe
+C:\Users\Макс\Desktop\Проекты\C#\Лобач\Notepad\Notepad\bin\Debug\Notepad.pdb
+C:\Users\Макс\Desktop\Проекты\C#\Лобач\Notepad\Notepad\obj\Debug\Notepad.csprojAssemblyReference.cache
+C:\Users\Макс\Desktop\Проекты\C#\Лобач\Notepad\Notepad\obj\Debug\Notepad.Form1.resources
+C:\Users\Макс\Desktop\Проекты\C#\Лобач\Notepad\Notepad\obj\Debug\Notepad.Properties.Resources.resources
+C:\Users\Макс\Desktop\Проекты\C#\Лобач\Notepad\Notepad\obj\Debug\Notepad.csproj.GenerateResource.cache
+C:\Users\Макс\Desktop\Проекты\C#\Лобач\Notepad\Notepad\obj\Debug\Notepad.csproj.CoreCompileInputs.cache
+C:\Users\Макс\Desktop\Проекты\C#\Лобач\Notepad\Notepad\obj\Debug\Notepad.exe
+C:\Users\Макс\Desktop\Проекты\C#\Лобач\Notepad\Notepad\obj\Debug\Notepad.pdb
+C:\Users\Макс\Desktop\Проекты\C#\Лобач\Notepad\Notepad\obj\Debug\Notepad.Form2.resources
