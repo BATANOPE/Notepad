@@ -1,12 +1,11 @@
 ﻿namespace Notepad
 {
-    partial class Form2
+    partial class saveToClose
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -19,7 +18,6 @@
             }
             base.Dispose(disposing);
         }
-
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -93,7 +91,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "Блокнот";
-            this.Load += new System.EventHandler(this.Form2_Load);
+            this.Load += new System.EventHandler(this.saveToClose_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

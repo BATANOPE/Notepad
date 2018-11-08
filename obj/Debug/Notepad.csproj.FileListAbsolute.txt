@@ -9,3 +9,4 @@ C:\Users\Макс\Desktop\Проекты\C#\Лобач\Notepad\Notepad\obj\Debug
 C:\Users\Макс\Desktop\Проекты\C#\Лобач\Notepad\Notepad\obj\Debug\Notepad.exe
 C:\Users\Макс\Desktop\Проекты\C#\Лобач\Notepad\Notepad\obj\Debug\Notepad.pdb
 C:\Users\Макс\Desktop\Проекты\C#\Лобач\Notepad\Notepad\obj\Debug\Notepad.Form2.resources
+C:\Users\Макс\Desktop\Проекты\C#\Лобач\Notepad\Notepad\obj\Debug\Notepad.saveToClose.resources

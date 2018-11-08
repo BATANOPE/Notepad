@@ -11,14 +11,14 @@ using System.IO;
 
 namespace Notepad
 {
-    public partial class Form2 : Form
+    public partial class saveToClose : Form
     {
         public bool cancel = false;
 
-        public Form2()
+        public saveToClose()
         {
             InitializeComponent();
-            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -28,7 +28,7 @@ namespace Notepad
 
         private void btSave_Click(object sender, EventArgs e)
         {
-            
+
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Filter = "Text Files (.txt)|*.txt";
             saveFileDialog1.DefaultExt = "*.txt";
@@ -36,18 +36,19 @@ namespace Notepad
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
 
-                ((Form1)this.Tag).richTextBox.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);                             
+                ((Form1)this.Tag).richTextBox.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
             }
             else
                 MessageBox.Show("Не выбран путь", "Error ");
 
-            this.Hide();
+            this.Close();
+            ((Form1)this.Tag).Close();
         }
 
         private void btDontSave_Click(object sender, EventArgs e)
         {
-            ((Form1)this.Tag).richTextBox.Clear();
-            this.Hide();
+            this.Close();
+            ((Form1)this.Tag).Close();
         }
 
         private void btCancel_Click(object sender, EventArgs e)
@@ -55,9 +56,10 @@ namespace Notepad
             this.Hide();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void saveToClose_Load(object sender, EventArgs e)
         {
 
         }
     }
 }
+

@@ -23,7 +23,10 @@ namespace Notepad
         //если было нажато создать файл и отмена
         bool cancel = false;
 
-        Form2 SaveOrNo = new Form2();
+        Form2 saveOrNo = new Form2();
+        saveToClose sTCl = new saveToClose();
+
+        
 
         public Form1()
         {
@@ -40,6 +43,7 @@ namespace Notepad
             //открытие файла
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Filter = "Text Files (.txt)|*.txt";
+            openFileDialog1.DefaultExt = "*.txt";
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -113,6 +117,9 @@ namespace Notepad
         {
             cancel = false;
 
+            if (richTextBox.Text == "")
+                return;
+
             if (way != null)
             {
                 richTextBox.SaveFile(way, RichTextBoxStreamType.PlainText);
@@ -121,13 +128,11 @@ namespace Notepad
             }
             else
             {
-                SaveOrNo.cancel = cancel;
-                //SaveOrNo.Tag = this;
-                SaveOrNo.Show();
+                
+                saveOrNo.Tag = this;
+                saveOrNo.Show();
                
-                if (cancel == false)
-                    richTextBox.Clear();
-
+                                
             }
                        
 
@@ -138,14 +143,61 @@ namespace Notepad
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (saved == true)
+            if (saved == true || richTextBox.Text == "")
                 this.Close();
             else
             {
-                SaveOrNo.Show();
+               
+                sTCl.Tag = this;
+                sTCl.Show();                                
+            }
+        }
 
-                if (cancel == false)
-                    return;
+        private void вырезатьToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            richTextBox.Cut();
+        }
+
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox.Copy();
+        }
+
+        private void insertToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            richTextBox.Paste();
+        }
+
+        private void delToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox.SelectedText = "";
+        }
+
+        private void allToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox.SelectAll();
+        }
+
+        private void TextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FontDialog fd = new FontDialog();
+            if (fd.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox.SelectionFont = fd.Font;
+            }
+        }
+
+        private void colorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog cd = new ColorDialog();
+            if (cd.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox.SelectionColor = cd.Color;
             }
         }
     }
